@@ -6,4 +6,7 @@ class Tax {
 	public double calcTax() {
 		return 234.55;
 	}
+	private void testName() {
+		
+	}
 }

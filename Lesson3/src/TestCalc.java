@@ -2,13 +2,18 @@
 public class TestCalc {
 
 	public static void main(String[] args) {
-		Tax t = new Tax(); // creating an instance
-		t.grossIncome= 50000; 
-		t.dependents= 2;
-		t.state= "NJ";
-		double yourTax = t.calcTax(); //calculating tax
+		double yourTax = getYourTax();
 		// Printing the result
 		System.out.println("Your tax is " + yourTax);
+	}
+
+	private static double getYourTax() {
+		Tax tax = new Tax(); // creating an instance
+		tax.grossIncome= 50000; 
+		tax.dependents= 2;
+		tax.state= "NJ";
+		double yourTax = tax.calcTax(); //calculating tax
+		return yourTax;
 	}
 
 }
